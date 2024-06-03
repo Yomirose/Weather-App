@@ -20,5 +20,7 @@ searchBtn.addEventListener('click', function(e) {
                 <li><strong>Description:</strong> ${data.weather[0].description}</li>
             `;
         })
-        .catch(error) 
+        .catch(error => {
+            console.log(error)
+        });
 });
