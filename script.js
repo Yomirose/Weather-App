@@ -13,11 +13,13 @@ searchBtn.addEventListener('click', function(e) {
                 alert('City not found');
                 return;
             }
+            const currentDate = new Date().toLocaleDateString();
             const weatherInfo = document.getElementById('weather-info');
             weatherInfo.innerHTML = `
                 <li><strong>Location:</strong> ${data.name}</li>
                 <li><strong>Temperature:</strong> ${data.main.temp} °C</li>
                 <li><strong>Description:</strong> ${data.weather[0].description}</li>
+                 <li><strong>Date:</strong> ${currentDate}</li>
             `;
         })
         .catch(error => {
